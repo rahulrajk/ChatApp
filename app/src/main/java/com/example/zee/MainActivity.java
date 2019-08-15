@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     EditText username;
     Button login;
     Socket socket;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = username.getText().toString();
+                name = username.getText().toString();
                 if (!name.isEmpty()){
                     socket.emit("username",name);
                 }else{
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("json", String.valueOf(check));
                 if (!check.isEmpty()){
                     Intent i = new Intent(getApplicationContext(),ChatActivity.class);
+                    i.putExtra("name",name);
                     startActivity(i);
                 }
             }

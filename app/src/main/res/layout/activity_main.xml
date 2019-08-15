@@ -3,15 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_margin="20dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="Safety Chat"
+        android:textColor="#fff"
+        android:padding="8dp"
+        android:background="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:textSize="26sp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/username"
+        android:textColorHint="@color/colorPrimaryDark"
         android:layout_centerInParent="true"
+        android:layout_margin="12dp"
         android:hint="Enter user name:"/>
 
     <Button
@@ -20,8 +32,10 @@
         android:layout_below="@+id/username"
         android:id="@+id/login"
         android:text="Login"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="36dp"/>
 
 </RelativeLayout>
 

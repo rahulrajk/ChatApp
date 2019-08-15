@@ -6,10 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chat"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:padding="4dp"
+        android:textSize="26sp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/chat_txt"
+        android:layout_alignParentTop="true"
+        android:textColor="#fff"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/chat_recyler"
+        android:layout_below="@+id/chat_txt"
         tools:listitem="@layout/recyler_chat"
+        android:layout_above="@+id/messagecontent"
         android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your message..."
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/sendbtn"
+        android:id="@+id/messagecontent"
+        android:layout_margin="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:layout_toStartOf="@+id/sendbtn" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendbtn"
+        android:tint="#fff"
+        android:src="@drawable/abc_vector_test"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

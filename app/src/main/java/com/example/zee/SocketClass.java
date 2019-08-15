@@ -11,8 +11,8 @@ import java.net.URISyntaxException;
 class SocketClass {
 
     Socket socket;
-    String url = "http://100.127.126.167:3000";
-
+//    String url = "http://100.127.126.167:3000";
+    String url = "http://192.168.43.155:3000";
     private SocketClass() throws URISyntaxException {
 
         socket = IO.socket(url);

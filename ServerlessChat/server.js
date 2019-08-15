@@ -77,9 +77,17 @@ app.get('/',(req,res)=>{
 io.on('connection',(socket)=>{
     console.log('user connected')
 
+    socket.emit('check','check')
+
     socket.on('username',(username)=>{
         console.log(username + "has joined the chat")
         socket.emit('authenticated','authenticated')
+    })
+
+    socket.on('messageDetection',(u,m)=>{
+        let message = {u,m}
+        console.log(message)
+        io.emit('receivemessage',message)
     })
 
 })
